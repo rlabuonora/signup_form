@@ -16,9 +16,12 @@ body {
     color: #FFF;
 }
 
-@media (min-width: 600px) {
-    .container {
+@media (min-width: 800px) {
+    div.container {
         display: flex;
+        width: 90%;
+        margin: 3em auto;
+        font-size: .8em;
     }
 }
 
@@ -38,8 +41,23 @@ body {
     font-weight: 300;
     padding: 0 1em;
     margin-top: .5em;
+}
 
 
+@media (min-width: 800px) {
+    .main h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 3em 1em auto 0;
+        padding-left: 1rem;
+        font-weight: 700;
+
+    }
+
+    .main p {
+        font-size: 1em;
+        font-weight: 400;
+    }
 }
 
 .cta {
@@ -49,7 +67,13 @@ body {
     text-align: center;
     font-weight: 200;
     margin: 2em 3.5em;
+}
 
+@media (min-width: 800px) {
+    .cta {
+        margin: 0 auto;
+        width: 280px;
+    }
 }
 
 .cta em {
@@ -63,6 +87,13 @@ form {
     margin: 2em 3.5em;
     border-radius: .5em;
     padding: 1em;
+}
+
+@media (min-width: 800px) {
+    form {
+
+        width: 380px;
+    }
 }
 
 input[type=text], input[type=password],
@@ -81,6 +112,10 @@ input[type=submit] {
 input[type=text], input[type=password] {
     font-weight: 500;
     color: #777;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: 1px solid var(--grayish-blue);
 }
 
 input[type=submit] {
