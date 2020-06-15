@@ -23,11 +23,21 @@ body {
         margin: 3em auto;
         font-size: .8em;
     }
+
 }
 
-.main .column {
+.main.column {
     margin: 3em auto;
     text-align: center;
+    margin-right: 0;
+
+}
+
+@media (min-width: 800px) {
+    .main.column  {
+        max-width: 40%;
+        text-align: left;
+     }
 }
 
 .main h1 {
@@ -48,15 +58,17 @@ body {
     .main h1 {
         font-size: 2rem;
         line-height: 1.2;
-        margin: 3em 1em auto 0;
-        padding-left: 1rem;
+        margin: 2em 1em auto 0;
+        padding-left: 0;
+        margin-left: 0;
         font-weight: 700;
-
     }
 
     .main p {
         font-size: 1em;
         font-weight: 400;
+        margin-left: 0;
+        padding-left: 0;
     }
 }
 
