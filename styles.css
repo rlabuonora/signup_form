@@ -19,9 +19,9 @@ body {
 @media (min-width: 800px) {
     div.container {
         display: flex;
-        width: 90%;
+        width: 85%;
         margin: 3em auto;
-        font-size: .8em;
+        font-size: 1em;
     }
 
 }
@@ -29,8 +29,6 @@ body {
 .main.column {
     margin: 3em auto;
     text-align: center;
-    margin-right: 0;
-
 }
 
 @media (min-width: 800px) {
@@ -39,6 +37,14 @@ body {
         text-align: left;
         font-size: 1em;
      }
+}
+
+@media (min-width: 800px) {
+    .form.column  {
+        max-width: 60%;
+        text-align: left;
+        font-size: 1em;
+    }
 }
 
 .main h1 {
@@ -57,7 +63,7 @@ body {
 
 @media (min-width: 800px) {
     .main h1 {
-        font-size: 2rem;
+        font-size: 3em;
         line-height: 1.2;
         margin: 2em 1em auto 0;
         padding-left: 0;
@@ -69,24 +75,18 @@ body {
         font-size: 1em;
         font-weight: 400;
         margin-left: 0;
-        padding-left: 0;
+        padding: 1em 1em 0 0;
     }
 }
 
 .cta {
     background-color: var(--blue);
-    border-radius: .3em;
+    border-radius: .5em;
     padding: 1em 5em;
     text-align: center;
     font-weight: 200;
     margin: 2em 3.5em;
-}
-
-@media (min-width: 800px) {
-    .cta {
-        margin: 0 auto;
-        width: 280px;
-    }
+    box-shadow: 0 14px 2px -6px rgba(56, 56, 56, 0.5);
 }
 
 .cta em {
@@ -100,14 +100,11 @@ form {
     margin: 2em 3.5em;
     border-radius: .5em;
     padding: 1em;
+    box-shadow: 0 14px 0px -6px rgba(48, 48, 48, .3);
+
 }
 
-@media (min-width: 800px) {
-    form {
 
-        width: 380px;
-    }
-}
 
 input[type=text], input[type=password],
 input[type=submit] {
@@ -143,6 +140,8 @@ input[type=submit] {
     border-radius: .4em;
     font-size: 1em;
     font-weight: 500;
+    box-shadow:         inset 0 -4px 1px rgba(26, 103, 70, .5);
+
 
 }
 
@@ -152,6 +151,7 @@ input[type=submit] {
     color: var(--grayish-blue);
     padding: 0 4em;
     line-height: 2;
+
 }
 
 .form_footer a {
@@ -159,4 +159,12 @@ input[type=submit] {
     font-weight: 700;
     text-decoration: none;
 
+}
+
+
+@media (min-width: 800px) {
+    .form_footer {
+        /* width: 100%; */
+        margin: 1em 0;
+    }
 }
