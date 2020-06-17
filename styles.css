@@ -19,7 +19,7 @@ body {
     div.container {
         display: flex;
         width: 85%;
-        margin: 3em auto;
+        margin: 0 auto;
         font-size: 1em;
     }
 
@@ -47,7 +47,7 @@ body {
 }
 
 .main h1 {
-    padding: 1em 1em 0 1em;
+    padding: 0 1em 0 1em;
     font-weight: 500;
     margin-bottom: 0;
 }
@@ -63,10 +63,10 @@ body {
 @media (min-width: 800px) {
     .main h1 {
         font-size: 2em;
+        font-weight: 700;
         line-height: 1.2;
         margin: 3em 1em auto 0;
         padding-left: 0;
-        font-weight: 700;
     }
 
     .main p {
@@ -81,17 +81,17 @@ body {
 .form.column {
     font-size: .9em;
 }
+
 @media (min-width: 800px) {
     .form.column {
         /* width: 100%; */
-        font-size: 1.2em;
+        font-size: 1em;
     }
 }
 
 .cta {
     background-color: var(--blue);
     border-radius: .5em;
-
     text-align: center;
     font-weight: 200;
     padding: 1em 2em;
@@ -104,6 +104,12 @@ body {
     font-weight: 500;
 }
 
+@media (min-width: 800px) {
+    .cta {
+        margin-top: 1em;
+
+    }
+}
 
 form {
     background: #fff;
@@ -115,12 +121,19 @@ form {
 
 }
 
+@media (min-width: 800px) {
+    form {
+        margin-top: 1em;
+        padding-top: .2em;
+    }
+}
+
 
 
 input[type=text], input[type=password],
 input[type=submit], input[type=email] {
     font-family: 'Poppins';
-    margin: 2.2em auto;
+    margin: 2em auto;
     display: block;
     padding: 1em;
     width: 80%;
