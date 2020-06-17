@@ -118,9 +118,9 @@ form {
 
 
 input[type=text], input[type=password],
-input[type=submit] {
+input[type=submit], input[type=email] {
     font-family: 'Poppins';
-    margin: 1.2em auto;
+    margin: 2.2em auto;
     display: block;
     padding: 1em;
     width: 80%;
@@ -128,12 +128,14 @@ input[type=submit] {
     border: 1px solid lightgray;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password],
+  input[type=email] {
     font-weight: 500;
     color: #777;
 }
 
-input[type=text]:focus, input[type=password]:focus {
+input[type=text]:focus, input[type=password]:focus,
+  input[type=email]:focus  {
     outline: 1px solid var(--grayish-blue);
 }
 
@@ -173,4 +175,33 @@ input[type=submit] {
         /* width: 100%; */
         margin: 1em 0;
     }
+}
+
+
+.invalid input {
+    background-image: url(images/icon-error.svg);
+    background-repeat: no-repeat;
+    background-position: top 50% right 5%;
+}
+
+
+div.error {
+    display: none;
+}
+
+.invalid div.error {
+
+    display: block;
+}
+
+.error {
+    position: absolute;
+    font-size: .6em;
+    color: var(--red);
+    bottom: -1.6em;
+    right: 4em;
+}
+
+.field {
+    position: relative;
 }
