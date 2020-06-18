@@ -26,28 +26,28 @@
             <div class="cta">
                 <em>Try it free 7 days </em>then $20/mo. thereafter
             </div>
-            <form action="">
+            <form id="form" action="">
                 <div class="field">
                     <input type="text" placeholder="First Name"
                            class="required invalid" name="first_name"/>
                     <div class="error">First Name cannot be empty</div>
                 </div>
-	        <div class="field invalid">
+	        <div class="field">
                     <input type="text" placeholder="Last Name"
                            class="required" name="last_name"/>
                     <div class="error">Last Name cannot be empty</div>
                 </div>
-                <div class="field invalid">
+                <div class="field">
                     <input type="text" placeholder="Email Address"
                            class="required" name="email"/>
                     <div class="error">Looks like this is not an email</div>
                 </div>
-                <div class="field invalid">
+                <div class="field">
                     <input type="password" placeholder="Password"
                            class="required" name="password"/>
                     <div class="error">Password cannot be empty</div>
                 </div>
-              
+
               <input type="submit" value="Claim your free trial "/>
               <div class="form_footer">
                   By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
@@ -63,12 +63,40 @@
   </footer>
   <script type="text/javascript">
    (function () {
-       
-       console.log("foo");
+
+       // helper to validate email
+       // https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+       function validateEmail(email) {
+           const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+           return re.test(String(email).toLowerCase());
+       }
+
+       var form = document.getElementById("form");
 
 
-       
-       
+       var validate_input = function(e) {
+           e.preventDefault();
+           // validate first_name, last_name and password
+
+           [this.first_name,
+            this.last_name,
+            this.password].forEach(element => {
+                if (element.value === "") {
+                    element.parentNode.classList.add("invalid");
+                } else {
+                    element.parentNode.classList.remove("invalid");
+                }
+            });
+
+           // validate email
+           if(validateEmail(this.email.value)) {
+               this.email.parentNode.classList.remove("invalid");
+           } else {
+               this.email.parentNode.classList.add("invalid");
+           }
+       };
+       // register event listener
+       form.addEventListener('submit', validate_input, false);
    })();
   </script>
 </body>
